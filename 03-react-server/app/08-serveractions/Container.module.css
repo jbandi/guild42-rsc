@@ -1,0 +1,14 @@
+.wrapper {
+  border: 5px solid black;
+  padding: 30px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center,
+}
+
+.input {
+  height: 2.5em;
+  width: 50px;
+  margin: 10px;
+}
