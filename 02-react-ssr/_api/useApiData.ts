@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 export function useApiData() {
   const [data, setData] = useState("");
@@ -13,6 +13,7 @@ export function useApiData() {
 }
 
 export async function fetchDataFromApi() {
+  
   const response = await fetch("http://localhost:3000/");
   const message = await response.json();
   console.log("loaded message from api", message.text);
