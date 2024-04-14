@@ -4,10 +4,10 @@ import styles from "./Greeter.module.css";
 
 export function Greeter() {
   // fetching with effect and state
-  // const messageText = useApiData();
+  const messageText = useApiData();
 
   // fetching with suspense
-  const messageText = suspend(fetchDataFromApi);
+  // const messageText = suspend(fetchDataFromApi);
 
   console.log("rendering Greeter with messageText", messageText);
   return (
