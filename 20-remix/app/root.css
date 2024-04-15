@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /*place-items: center;*/
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 1em;
+}
