@@ -1,0 +1,22 @@
+---
+import {Counter} from './Counter.tsx'
+
+console.log('rendering Container')
+---
+<div class="container">
+    <h1>Container</h1>
+    <p>Sea of static html ...</p>
+    <!--<Counter />-->
+    <Counter client:load />
+</div>
+
+<style>
+    .container {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-light), 66%), rgba(var(--accent-light), 33%));
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+</style>
