@@ -1,12 +1,11 @@
 // "use server";
 
-// import "server-only";
-
-import { getCount, getData, updateCount } from "@/_api/api";
+import { readFile } from "fs/promises";
 import { revalidatePath } from "next/cache";
 import { timestampWithMillis } from "@/app/util";
+import { getCount, getData, updateCount} from "@/app/db/db";
+import {DATA_PATH} from '@/app/db/constants';
 
-const fs = require("fs").promises;
 
 export function readServerData() {
   let serverData = "";

@@ -61,6 +61,9 @@ export default function RootTemplate({
         <Link href={`/08-serveractions?${CACHE_BUST_PARAM}=${cacheBust}`}>
           ServerActions
         </Link>
+        <Link href={`/09-form-hooks?${CACHE_BUST_PARAM}=${cacheBust}`}>
+          Form Hooks
+        </Link>
       </nav>
       <div id="main">{children}</div>
     </div>

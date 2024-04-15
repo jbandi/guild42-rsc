@@ -1,4 +1,6 @@
 import { AsyncDatabase } from "promised-sqlite3";
+import {DATA_PATH} from '@/app/db/constants';
+
 
 interface MessageRow {
   id: number;
@@ -9,7 +11,7 @@ interface CounterRow {
   val: string;
 }
 
-export const db = await AsyncDatabase.open("./_api/db/db.sqlite");
+export const db = await AsyncDatabase.open(`${DATA_PATH}/db.sqlite`);
 console.log("Connected to Database");
 
 const MESSAGE_QUERY = "SELECT * FROM MESSAGE WHERE ID = ?";
