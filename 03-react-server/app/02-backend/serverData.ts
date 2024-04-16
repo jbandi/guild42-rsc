@@ -18,7 +18,7 @@ export function readServerData() {
   // serverData = await getData();
   //
   // // random delay
-  // const delay = (Math.floor(Math.random() * 3) + 2) * 1000;
+  // const delay = Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
   // await new Promise((resolve) => setTimeout(resolve, delay));
   //
   console.log("Server Data: ", serverData);
