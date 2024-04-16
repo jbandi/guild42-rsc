@@ -4,7 +4,7 @@ import {
   queryFromDB,
   updateCountInDb,
   updateCountServer,
-} from "@/app/02-backend/serverData";
+} from "./serverData";
 import { Suspense } from "react";
 import { Spinner } from "@/app/Spinner";
 import { revalidatePath } from "next/cache";
