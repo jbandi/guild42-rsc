@@ -1,8 +1,10 @@
 "use client";
 
+import {use} from "react";
 import styles from "./Child.module.css";
 
 type ChildProps = { backendData?: string };
+
 export default function Child({ backendData }: ChildProps) {
   console.log("rendering Child");
   return (
