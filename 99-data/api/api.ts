@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { getData } from "./db.ts";
 
 const server = Bun.serve({

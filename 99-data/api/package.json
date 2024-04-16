@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "bun api.ts"
+    "start": "bun --watch api.ts"
   },
   "keywords": [],
   "author": "",
