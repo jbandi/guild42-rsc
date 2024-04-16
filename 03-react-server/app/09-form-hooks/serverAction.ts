@@ -1,9 +1,7 @@
 "use server";
 
-// import "server-only";
-
-import { getCount, getData, updateCount } from "@/_api/api";
 import { revalidatePath } from "next/cache";
+import {getCount, updateCount} from '@/app/db/db';
 
 export async function loadCountFromDb() {
   console.log("Querying DB ...");
@@ -27,5 +25,9 @@ export async function updateCountServerState(prevState: any, formData: FormData)
   const newVal = number + 1;
   await updateCount(newVal);
   revalidatePath("/");
+
+  // random delay
+  // const delay = Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+  // await new Promise((resolve) => setTimeout(resolve, delay));
   return `(incremented ${new Date().toLocaleTimeString()})`
 }
