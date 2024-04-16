@@ -1,22 +1,20 @@
-import { getData } from "@/_api/api";
+import {getData} from '@/app/db/db';
+import {timestampWithMillis} from '@/app/util';
 
 const fs = require("fs").promises;
 
-export async function readServerData() {
-  let serverData = "";
-  serverData = "This is Server Data.";
+export async function queryFromDB(messageId: number) {
+  console.log(
+    `Querying DB for id ${messageId} (${timestampWithMillis(new Date())})`,
+  );
+  const dbData = await getData(messageId);
 
-  // // read current server path
-  serverData = process.cwd();
-  //
-  // // read data from file
-  serverData = await fs.readFile("./_api/SERVER_DATA.txt", "utf8");
-
-  // // read data from database
-  serverData = await getData();
-
-  const delay = (Math.floor(Math.random() * 3) + 2) * 1000;
+  const delay = Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
   await new Promise((resolve) => setTimeout(resolve, delay));
-  console.log("Server Data: ", serverData);
-  return serverData;
+
+  console.log(
+    `Loaded data for id ${messageId} from the DB (${timestampWithMillis(new Date())}): `,
+    dbData,
+  );
+  return dbData;
 }
