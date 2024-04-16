@@ -1,9 +1,7 @@
 
 import { readFile } from "fs/promises";
-import { revalidatePath } from "next/cache";
-import { timestampWithMillis } from "@/app/util";
-import { getCount, getData, updateCount} from "@/app/db/db";
 import {DATA_PATH} from '@/app/db/constants';
+import {getData} from '@/app/db/db';
 
 
 export function readServerData() {
@@ -14,7 +12,7 @@ export function readServerData() {
   // serverData = process.cwd();
   //
   // // read data from file
-  // serverData = await fs.readFile("./_api/SERVER_DATA.txt", "utf8");
+  // serverData = await readFile(`${DATA_PATH}/SERVER_DATA.txt`, "utf8");
   //
   // // read data from database
   // serverData = await getData();
