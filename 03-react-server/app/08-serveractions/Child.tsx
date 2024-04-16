@@ -1,6 +1,6 @@
 "use client";
 
-import { updateCountServerWithValue } from "@/app/02-backend/serverData";
+import { updateCountServerWithValue } from "./serverData";
 import styles from "./Child.module.css";
 // type ChildProps = { updateFn: () => Promise<void> };
 
