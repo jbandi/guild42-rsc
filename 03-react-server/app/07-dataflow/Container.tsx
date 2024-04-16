@@ -1,7 +1,7 @@
 import Child from "./Child";
-import { queryFromDB } from "@/app/02-backend/serverData";
-import { Suspense } from "react";
-import { Spinner } from "@/app/Spinner";
+import {queryFromDB} from "./serverData";
+import {Suspense} from "react";
+import {Spinner} from "@/app/Spinner";
 import styles from './Container.module.css';
 
 export default async function Container() {
