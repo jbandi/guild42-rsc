@@ -3,7 +3,7 @@ export function Simple() {
   console.log("rendering Simple");
   return (
     <div>
-      <h1>Display of Greeter.</h1>
+      <h1>Simple Component</h1>
       <p>{now}</p>
     </div>
   );
