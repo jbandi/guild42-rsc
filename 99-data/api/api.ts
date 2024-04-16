@@ -1,4 +1,4 @@
-import { getData } from "./api.ts";
+import { getData } from "./db.ts";
 
 const server = Bun.serve({
   port: 3000,

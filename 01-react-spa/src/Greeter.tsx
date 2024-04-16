@@ -1,5 +1,5 @@
 import { suspend } from "suspend-react";
-import { fetchDataFromApi, useApiData } from "../_api/useApiData.ts";
+import { fetchDataFromApi, useApiData } from "./useApiData.ts";
 import styles from "./Greeter.module.css";
 
 export function Greeter() {

@@ -1,12 +1,16 @@
 import { AsyncDatabase } from "promised-sqlite3";
 
+export const DATA_PATH = "/Users/jbandi/Dev/MyGithub/guild42-rsc/99-data";
+
+
+
 interface MessageRow {
   id: number;
   text: string;
 }
 const QUERY = "SELECT * FROM MESSAGE WHERE ID = 1";
 
-export const db = await AsyncDatabase.open("./_api/db/db.sqlite");
+export const db = await AsyncDatabase.open(`${DATA_PATH}/db.sqlite`);
 console.log("Connected to Database");
 
 export async function getData() {
